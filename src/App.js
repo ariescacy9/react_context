@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import CountExpenses from './components/CountExpenses';
+import ExpensesMonth from './components/ExpensesMonth';
+import AddExpenses from './components/AddExpenses';
+import ContextProvider from './hooks/useList';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='App__gastos'>
+      <h1>GASTOS</h1>
+      <ContextProvider>
+        <CountExpenses/>
+        <ExpensesMonth/>
+        <AddExpenses/>
+      </ContextProvider>
+      </div>
     </div>
   );
 }
