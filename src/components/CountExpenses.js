@@ -3,8 +3,7 @@ import ListContext from "../context/UseContext";
 
 export default function CountExpenses (){
 
-  const context = useContext(ListContext);
-  const list =context.spend;
+  const { list } = useContext(ListContext);
   let sum = 0;
   for (let i = 0; i < list.length; i++) {
     sum += Number(list[i]);
