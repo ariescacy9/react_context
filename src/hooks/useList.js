@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import ListContext from "../context/UseContext";
 
-const initialSpend = [1200, 500, 230, 100];
+const initialSpend = [0];
 
 export default function ContextProvider({children}) {
 
